@@ -11,10 +11,11 @@
     background-image: url(./../img/about/hero.png);
 
     &__title {
-        margin: 0;
+        margin: 0 auto;
+        color: #ffffff;
         font-size: 56px;
-        color: #FFFFFF;
         font-weight: bold;
+        max-width: 1110px;
         line-height: 56px;
         font-style: normal;
         letter-spacing: -2.5px;

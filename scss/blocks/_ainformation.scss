@@ -1,0 +1,106 @@
+.aimformation {
+    margin: 0;
+    padding: 0;
+    padding-top: 400px;
+    padding-bottom: 104px;
+
+    .inflist {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1110px;
+
+        &__items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__leftbox {
+            max-width: 665px;
+            position: relative;
+        }
+
+        &__title {
+            @include heading-title;
+            width: 445px;
+        }
+
+        &__dfn {
+            @include dfn;
+            width: 445px;
+            margin-top: 24px;
+        }
+
+        &__link {
+            @include link-style;
+            display: block;
+            margin-top: 40px;
+        }
+
+        &__items:nth-child(even) {
+            margin-top: 160px;
+            margin-bottom: 16px;
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.inflist {
+    .bfirst::after {
+        content: "";
+        z-index: -1;
+        width: 445px;
+        height: 445px;
+        right: -130px;
+        position: absolute;
+        background-size: 445px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/circle-bg.svg);
+    }
+
+    .bsecond::after {
+        content: "";
+        top: auto;
+        z-index: -1;
+        left: -130px;
+        width: 445px;
+        height: 445px;
+        position: absolute;
+        background-size: 445px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/circle-bg.svg);
+    }
+
+
+    .bfirst::before {
+        content: "";
+        z-index: 1;
+        width: 740px;
+        height: 150px;
+        right: -100px;
+        bottom: 200px;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/arrows/arrow-3.svg);
+    }
+
+    .bsecond::before {
+        content: "";
+        left: 0;
+        z-index: 2;
+        width: 350px;
+        height: 150px;
+        bottom: -200px;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/arrows/arrow-4.svg);
+    }
+
+
+}

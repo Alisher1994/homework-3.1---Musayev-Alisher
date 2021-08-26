@@ -1,0 +1,164 @@
+.buy {
+    display: flex;
+    padding-top: 240px;
+
+    &__list {
+        padding: 0;
+        display: flex;
+        margin: 0 auto;
+        max-width: 1275px;
+        position: relative;
+    }
+
+    &__items {
+        max-width: 350px;
+        list-style-type: none;
+    }
+
+    &__art-first {
+        @include art;
+        background-image: url(./../img/buy/icon-1.svg);
+    }
+
+    &__art-second {
+        @include art;
+        background-image: url(./../img/buy/icon-2.svg);
+    }
+
+    &__art-thrid {
+        @include art;
+        background-image: url(./../img/buy/icon-3.svg);
+    }
+
+    &__items:nth-child(even) {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    &__title {
+        @include heading-name;
+        margin-top: 40px;
+    }
+
+    &__dfn {
+        @include dfn;
+        margin-top: 27px;
+    }
+}
+
+.buy__list::before {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 41px;
+    bottom: 0;
+    width: 775px;
+    height: 15px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./../img/line.svg);
+}
+
+// responsive for tablet
+@media only screen and (max-width: 768px) {
+    .buy {
+        padding: 244px 98px 0;
+
+        &__items {
+            display: flex;
+            max-width: 573px;
+            margin-bottom: 40px;
+        }
+
+        &__art-first {
+            @include art;
+            background-image: url(./../img/buy/icon-1.svg);
+        }
+
+        &__art-second {
+            @include art;
+            background-image: url(./../img/buy/icon-2.svg);
+        }
+
+        &__art-thrid {
+            @include art;
+            background-image: url(./../img/buy/icon-3.svg);
+        }
+
+        &__items:nth-child(even) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__box {
+            width: 398px;
+            margin-left: 80px;
+        }
+
+        &__title {
+            @include heading-name;
+            margin-top: 0;
+        }
+
+        &__dfn {
+            @include dfn;
+            margin-top: 27px;
+        }
+
+    }
+
+    .buy__list::before {
+        content: "";
+        left: 40px;
+        right: 2px;
+        top: -148px;
+        bottom: 0;
+        width: 15px;
+        height: 500px;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/line.svg);
+    }
+}
+// end of tablet responsive
+
+// responsive for mobile 
+@media only screen and (max-width: 375px) {
+    .buy {
+        padding: 240px 32px 0;
+
+        &__items {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__box {
+            width: 311px;
+            margin-left: 0;
+        }
+
+        &__title {
+            margin-top: 24px;
+        }
+        
+        &__dfn {
+            margin-top: 24px;
+        }
+    }
+
+    .buy__list::before {
+        display: none;
+        content: "";
+    }
+}
+// end of responsive mobile

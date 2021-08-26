@@ -1,0 +1,26 @@
+.astore {
+    background-color: var(--store-bgcolor);
+    margin-top: 160px;
+    padding: 102px 165px;
+    background-repeat: no-repeat;
+    background-size: 1153px 347px;
+    background-position: bottom right;
+    background-image: url(./../img/store/store-circle.svg);
+
+    .astore__wrapper {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1110px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        max-width: 415px;
+        @include heading-title-store;
+    }
+
+    .astright__img {
+        margin-left: 18px;
+    }
+}

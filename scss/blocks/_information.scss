@@ -1,0 +1,365 @@
+.imformation {
+    margin: 0;
+    padding: 0;
+    padding-top: 200px;
+    padding-bottom: 104px;
+
+    .inflist {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1110px;
+
+        &__items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__leftbox {
+            max-width: 665px;
+            position: relative;
+        }
+
+        &__title {
+            @include heading-title;
+            width: 445px;
+        }
+
+        &__dfn {
+            @include dfn;
+            width: 445px;
+            margin-top: 24px;
+        }
+
+        &__link {
+            @include link-style;
+            display: block;
+            margin-top: 40px;
+        }
+
+        &__items:nth-child(even) {
+            margin-top: 160px;
+            margin-bottom: 16px;
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.inflist {
+    .bfirst::after {
+        content: "";
+        z-index: -1;
+        width: 445px;
+        height: 445px;
+        right: -130px;
+        position: absolute;
+        background-size: 445px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/circle-bg.svg);
+    }
+
+    .bsecond::after {
+        content: "";
+        top: auto;
+        z-index: -1;
+        left: -130px;
+        width: 445px;
+        height: 445px;
+        position: absolute;
+        background-size: 445px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/circle-bg.svg);
+    }
+
+    .bthrid::after {
+        content: "";
+        top: auto;
+        z-index: -1;
+        width: 445px;
+        height: 445px;
+        right: -130px;
+        position: absolute;
+        background-size: 445px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/circle-bg.svg);
+    }
+
+    .bfirst::before {
+        content: "";
+        z-index: 1;
+        width: 740px;
+        height: 150px;
+        right: -100px;
+        bottom: -1200px;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/arrows/arrow-3.svg);
+    }
+
+    .bsecond::before {
+        content: "";
+        left: 0;
+        z-index: 2;
+        width: 350px;
+        height: 150px;
+        bottom: -1500px;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/arrows/arrow-4.svg);
+    }
+
+    .bthrid::before {
+        content: "";
+        z-index: 1;
+        width: 740px;
+        height: 150px;
+        right: -480px;
+        bottom: -2025px;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./../img/arrows/arrow-3.svg);
+    }
+}
+
+// responsive for tablet 
+@media only screen and (max-width: 768px) {
+    .imformation {
+        margin: 0;
+        padding-top: 145px;
+        padding: 145px 97px 104px;
+
+        .inflist {
+            &__items {
+                display: flex;
+                margin: 0 auto;
+                text-align: center;
+                flex-direction: column-reverse;
+            }
+
+            &__title {
+                width: 457px;
+                margin: 0 auto;
+                margin-top: 56px;
+            }
+
+            &__dfn {
+                width: 573px;
+                margin-top: 40px;
+            }
+
+            &__link {
+                margin: 0 auto;
+                margin-top: 40px;
+            }
+
+            &__items:nth-child(even) {
+                margin-top: 128px;
+                margin-bottom: 128px;
+                flex-direction: column-reverse;
+            }
+
+
+            .bfirst::after {
+                content: "";
+                z-index: -1;
+                width: 445px;
+                height: 445px;
+                right: -340px;
+                position: absolute;
+                background-size: 445px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/circle-bg.svg);
+            }
+
+            .bsecond::after {
+                content: "";
+                top: auto;
+                z-index: -1;
+                left: -340px;
+                width: 445px;
+                height: 445px;
+                position: absolute;
+                background-size: 445px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/circle-bg.svg);
+            }
+
+            .bthrid::after {
+                content: "";
+                top: auto;
+                z-index: -1;
+                width: 445px;
+                height: 445px;
+                right: -340px;
+                position: absolute;
+                background-size: 445px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/circle-bg.svg);
+            }
+
+            .bfirst::before {
+                content: "";
+                z-index: 1;
+                width: 740px;
+                height: 150px;
+                right: -20px;
+                bottom: -1060px;
+                position: absolute;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/arrows/arrow-3.svg);
+            }
+
+            .bsecond::before {
+                content: "";
+                left: 0;
+                z-index: 2;
+                width: 350px;
+                height: 150px;
+                bottom: -1700px;
+                position: absolute;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/arrows/arrow-4.svg);
+            }
+
+            .bthrid::before {
+                content: "";
+                z-index: 1;
+                width: 740px;
+                height: 150px;
+                right: -380px;
+                bottom: -2710px;
+                position: absolute;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/arrows/arrow-3.svg);
+
+            }
+        }
+    }
+}
+
+
+// responsive for mobile
+@media only screen and (max-width: 375px) {
+    .imformation {
+        margin: 0;
+        padding-top: 145px;
+        padding: 145px 97px 120px;
+
+        .inflist {
+            &__items {
+                display: flex;
+                margin: 0 auto;
+                text-align: center;
+                flex-direction: column-reverse;
+            }
+
+            &__title {
+                width: 311px;
+                margin: 0 auto;
+                font-size: 32px;
+                margin-top: 56px;
+                line-height: 32px;
+            }
+
+            &__dfn {
+                width: 573px;
+                width: 311px;
+                margin-top: 32px;
+            }
+
+            &__link {
+                margin: 0 auto;
+                margin-top: 32px;
+            }
+
+            &__rightbox-img {
+                width: 311px;
+                height: 311px;
+            }
+
+            &__items:nth-child(even) {
+                margin-top: 120px;
+                margin-bottom: 120px;
+                flex-direction: column-reverse;
+            }
+
+
+            .bfirst::after {
+                content: "";
+                display: none;
+            }
+
+            .bsecond::after {
+                content: "";
+                display: none;
+            }
+
+            .bthrid::after {
+                content: "";
+                display: none;
+            }
+
+            .bfirst::before {
+                content: "";
+                z-index: 1;
+                width: 740px;
+                height: 150px;
+                right: -380px;
+                bottom: -1340px;
+                position: absolute;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/arrows/arrow-3.svg);
+            }
+
+            .bsecond::before {
+                content: "";
+                left: 0;
+                z-index: 2;
+                width: 350px;
+                left: -100px;
+                height: 150px;
+                bottom: -2056px;
+                position: absolute;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/arrows/arrow-4.svg);
+            }
+
+            .bthrid::before {
+                content: "";
+                z-index: 1;
+                width: 740px;
+                height: 150px;
+                right: -570px;
+                bottom: -2850px;
+                position: absolute;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/arrows/arrow-3.svg);
+            }
+        }
+    }
+}
+// end of responsive for mobile

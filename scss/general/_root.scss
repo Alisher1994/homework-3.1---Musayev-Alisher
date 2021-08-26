@@ -1,0 +1,14 @@
+:root {
+    --main-color: #fcb72b;
+    --store-bgcolor: #495567;
+    --footer-bgcolor: #333a44;
+    --intro-bg: url(./..img/intro/hero.webp);
+    --store-bg: url(./../img/store/circle.svg);
+    --information-bg: url(./..img/circle-bg.svg);
+}
+
+
+::selection {
+    color: #333a44;
+    background: #fcb72b;
+  }

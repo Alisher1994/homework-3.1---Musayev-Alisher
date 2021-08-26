@@ -1,0 +1,126 @@
+.afooter {
+    background: var(--footer-bgcolor);
+    width: 100%;
+
+    .footerwrapper {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1110px;
+        align-items: center;
+
+        &__hyperlink {
+            margin-right: 58px;
+        }
+
+        .nav {
+            &__list {
+                padding: 0;
+                display: flex;
+                list-style-type: none;
+            }
+
+            &__link {
+                @include nav-text;
+                margin-left: 32px;
+            }
+
+            &__link:hover {
+                @include nav-text-hover;
+
+            }
+        }
+
+        &__list {
+            display: flex;
+            cursor: pointer;
+            margin-left: auto;
+            list-style-type: none;
+
+            .facebook {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/footer/facebook.png);
+            }
+
+            .twitter {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                margin-left: 24px;
+                margin-right: 24px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/footer/twitter.png);
+            }
+
+            .instagram {
+                display: flex;
+                width: 24px;
+                height: 24px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(./../img/footer/instagram.png);
+            }
+        }
+    }
+}
+
+// responsive for tablets
+@media only screen and (max-width: 768px) {
+    .footerwrapper {
+        margin: 0 auto;
+        max-width: 689px;
+        padding: 35px 40px;
+    }
+}
+
+
+// responsive for mobile
+@media only screen and (max-width: 375px) {
+    .footerwrapper {
+        display: flex;
+        margin-right: 0;
+        max-width: 120px;
+        flex-direction: column;
+        padding: 64px 127px 88px;
+
+        .footerwrapper__hyperlink {
+            margin: 0 auto;
+        }
+
+        &__img {
+            margin: 0 auto;
+            margin-bottom: 41px;
+        }
+
+        &__list {
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .nav {
+            display: flex;
+            margin: 0 auto;
+            max-width: 76px;
+
+            &__list {
+                margin: 0;
+                padding: 0;
+                margin-bottom: 85px;
+                flex-direction: column;
+            }
+
+            .nav__link {
+                margin: 0;
+                display: block;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

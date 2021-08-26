@@ -1,0 +1,142 @@
+// header block for desktop. Header ishlashi uchun scss orqali mixin ulangan. Stilni o'zgartirish uchun mixinga kirib o'zgartirish kere. headerga ishlatilgan mixinlar: nav-text, link-style
+
+.header {
+    width: 100%;
+    z-index: 100;
+    height: 96px;
+    display: flex;
+    position: fixed;
+    padding: 22px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 15px 23px 3px rgba(34, 60, 80, 0.16);
+
+    .hwrapper {
+        display: flex;
+        width: 1110px;
+        margin: 0 auto;
+        align-items: center;
+
+        &__button {
+            display: none;
+        }
+
+        &__img {
+            width: 108px;
+            height: 28px;
+            display: block;
+            margin-right: 62px;
+        }
+    }
+
+    .nav {
+        &__list {
+            padding: 0;
+            display: flex;
+            list-style-type: none;
+        }
+
+        &__items {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        &__link {
+            @include nav-text;
+        }
+
+        &__link:hover {
+            @include nav-text-hover;
+        }
+
+        &__items:first-child {
+            margin-left: 0;
+        }
+
+        &__items:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    .hwrapper__link {
+        @include link-style;
+        margin-left: auto;
+    }
+
+    .hwrapper__link:hover {
+        @include link-style-hover;
+    }
+
+}
+
+// end of header desktop
+
+// responsive for tablet.
+@media screen and (max-width: 768px) {
+    .header {
+        top: 0;
+        height: 96px;
+        // position: fixed;
+        max-width: 768px;
+        padding: 22px 40px;
+
+        .hwrapper {
+            width: 689px;
+
+            &__img {
+                margin-right: 58px;
+            }
+
+            &__button {
+                display: none;
+            }
+        }
+    }
+}
+// end of responsive tablet
+
+// responsive for mobile.
+@media screen and (max-width: 375px) {
+    .header {
+        top: 0;
+        height: 64px;
+        position: fixed;
+        max-width: 375px;
+        padding: 24px 32px;
+        align-items: center;
+
+        .hwrapper {
+            width: 310px;
+
+            &__button {
+                width: 20px;
+                height: 16px;
+                border: none;
+                display: flex;
+                background-size: 20px 16px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-image: url(./../img/header/burger.svg);
+            }
+
+            &__hyperlink {
+                width: 76px;
+                height: 20px;
+                margin: 0 auto;
+                box-sizing: border-box;
+
+            }
+
+            &__img {
+                width: 76px;
+                height: 20px;
+            }
+        }
+    }
+
+    .nav,
+    .hwrapper__link {
+        display: none;
+    }
+}
+// end of responsive mobile

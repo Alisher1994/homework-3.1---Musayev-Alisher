@@ -8,16 +8,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-     justify-content: center;
     background-image: url(./../img/about/hero.png);
 
-    &__title {
-       
+    &__wrapper {
+        width: 1110px;
         margin: 0 auto;
-        color: #ffffff;
+    }
+
+    &__title {
+        margin: 0;
         font-size: 56px;
+        color: #ffffff;
         font-weight: bold;
-        max-width: 1110px;
         line-height: 56px;
         font-style: normal;
         letter-spacing: -2.5px;
